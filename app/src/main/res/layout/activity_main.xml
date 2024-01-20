@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#fff">
+
+
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="©️ Developed by Tajim"
+            android:fontFamily="@font/baloo_da"
+            android:textStyle="bold"
+
+            android:layout_gravity="right"
+
+            />-->
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:title=" "
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/baseline_lock_24"
+        app:menu="@menu/bnav_icon"
+        android:background="#fff"
+
+
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="19dp"
+            android:fontFamily="@font/baloo_da"
+            android:textStyle="bold"
+            android:translationY="2.5dp"
+            />
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <FrameLayout
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/frame_main"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/bNav"
+        android:layout_height="match_parent"/>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bnav"
+        app:labelVisibilityMode="labeled"
+        android:background="#fff"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#000000"
+        android:layout_above="@+id/bNav"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#000000"
+        android:layout_below="@+id/toolbar"/>
+</RelativeLayout>

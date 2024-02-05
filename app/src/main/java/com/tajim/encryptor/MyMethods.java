@@ -19,6 +19,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 public class MyMethods {
     public static String encryptData(String text, String pass) throws Exception{
+        pass = "#@A!&CX#@!"+pass;
         byte[] textByte = text.getBytes(StandardCharsets.UTF_8);
         byte[] passByte = pass.getBytes(StandardCharsets.UTF_8);
         SecretKeySpec secretKeySpec = new SecretKeySpec(passByte, "AES");
@@ -35,6 +36,7 @@ public class MyMethods {
 
     public static String decryptData(String text, String pass)throws Exception{
 
+        pass = "#@A!&CX#@!"+pass;
         byte[] decodedBytes = Base64.decode(text, Base64.DEFAULT);
         byte[] passByte = pass.getBytes(StandardCharsets.UTF_8);
         SecretKeySpec secretKeySpec = new SecretKeySpec(passByte, "AES");

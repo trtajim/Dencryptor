@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/txt_banv"
+        android:title="Text"
+        android:icon="@drawable/baseline_text_format_24"
+
+        />
+
+    <item
+        android:id="@+id/img_banv"
+
+        android:title="Image"
+        android:icon="@drawable/baseline_image_24"
+        />
+</menu>

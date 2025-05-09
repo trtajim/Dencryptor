@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ImageFragment"
+    android:background="#fff">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_lay_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="#1774BE"
+        app:tabIndicatorFullWidth="true"
+        android:background="#fff"
+
+
+        >
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_encrypt_img"
+            android:layout_width="wrap_content"
+            android:text="Encrypt Image"
+            android:layout_height="wrap_content"
+
+            />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_decrypt_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decrypt Image"
+            />
+
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tab_lay_img"
+
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+
+        >
+        <ImageView
+            android:id="@+id/img_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_2"
+            android:scaleType="fitXY"
+            android:layout_above="@+id/add_img"
+
+            />
+
+        <TextView
+            android:id="@+id/add_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add a Photo"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/baloo_da"
+            android:background="#575455"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/baseline_add_photo_alternate_24"
+            android:textSize="16dp"
+            android:drawablePadding="25dp"
+            android:paddingVertical="3dp"
+            android:paddingLeft="10dp"
+
+
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_img"
+        android:layout_marginHorizontal="10dp"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edLay_msg_img"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:hint="Encrypted Key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+
+
+
+            >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_msg_img"
+            android:layout_width="match_parent"
+            android:maxLines="3"
+            android:fontFamily="@font/baloo_da"
+
+            android:layout_height="match_parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/submit_btn_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Encrypt"
+            android:textColor="#fff"
+            android:layout_below="@+id/edLay_msg_img"
+            android:background="@drawable/curved_blue"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/txt_copy_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:visibility="visible"
+            android:text=""
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/submit_btn_img"
+            android:gravity="left"
+            android:textStyle="bold"
+            android:fontFamily="@font/baloo_da"
+            android:textSize="17dp"/>
+
+        <TextView
+            android:id="@+id/txt_result_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_copy_img"
+            android:text="@string/big"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:fontFamily="@font/baloo_da"
+            android:textSize="16dp"
+            android:visibility="gone"
+
+           />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_below="@+id/txt_copy_img"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <ImageView
+                    android:id="@+id/result_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+
+                    />
+            </LinearLayout>
+
+
+
+
+        </ScrollView>
+
+
+        <TextView
+            android:id="@+id/caution_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo_da"
+            android:text="Caution: The app may crash if invalid credentials are entered. "
+            android:drawableStart="@drawable/baseline_warning_24"
+            android:layout_below="@+id/submit_btn_img"
+            android:textSize="13dp"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+
+
+            android:drawablePadding="10dp"
+            android:layout_marginTop="20dp"/>
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

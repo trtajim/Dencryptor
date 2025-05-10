@@ -118,9 +118,9 @@ public class MainActivity extends AppCompatActivity {
         TextView declineButton = alertLayout.findViewById(R.id.decline_cus);
 
 
-        allowButton.setOnClickListener(v -> {
+        declineButton.setOnClickListener(v -> {
 
-            Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://api.whatsapp.com/send?phone=8801909131512&text=Hello!"));
+            Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.github.com/trtajim/"));
             startActivity(myIntent);
 
 
@@ -129,19 +129,11 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-        declineButton.setOnClickListener(v -> {
+        allowButton.setOnClickListener(v -> {
 
-            Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
-            emailIntent.setData(Uri.parse("mailto:trtajimofficial1@gmail.com")); // Only email apps should handle this
-            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Contact via Mail");
-            emailIntent.putExtra(Intent.EXTRA_TEXT, "Hello");
 
-            try {
-                startActivity(Intent.createChooser(emailIntent, "Send email using..."));
-            } catch (android.content.ActivityNotFoundException e) {
-                // If no email app is installed
-                Toast.makeText(this, "No email clients installed.", Toast.LENGTH_SHORT).show();
-            }
+            Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.trtajim.xyz/"));
+            startActivity(myIntent);
 
 
 

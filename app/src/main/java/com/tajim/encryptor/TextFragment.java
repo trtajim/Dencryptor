@@ -99,9 +99,9 @@ public class TextFragment extends Fragment {
             String pass = ed_pass.getText().toString();
             if (text.length()>0){
 
-                if (pass.length()!=16){
+                if (pass.length()!=6){
                     ed_pass.requestFocus();
-                    ed_pass.setError("Only 16 char.");
+                    ed_pass.setError("Only 6 char.");
                 }else {
                     caution_txt.setVisibility(View.GONE);
                     txt_copy.setVisibility(View.VISIBLE);
@@ -143,8 +143,8 @@ public class TextFragment extends Fragment {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                if (charSequence.toString().length()!=16){
-                    edLay_pass.setError("* 16 char. pass");
+                if (charSequence.toString().length()!=6){
+                    edLay_pass.setError("* 6 char. pass");
 
 
 

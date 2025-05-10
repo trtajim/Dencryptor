@@ -69,19 +69,19 @@
             android:layout_below="@+id/edLay_msg_txt"
             android:id="@+id/edLay_pass_txt"
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-            android:hint="password (16 characters)"
+            android:hint="password (6 characters)"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
             app:counterEnabled="true"
-            app:counterMaxLength="16"
+            app:counterMaxLength="6"
             app:endIconMode="password_toggle"
             app:errorIconDrawable="@drawable/baseline_error_outline_24"
             >
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ed_pass_txt"
                 android:layout_width="match_parent"
-                android:maxLength="16"
+                android:maxLength="6"
                 android:fontFamily="@font/baloo_da"
 
 
